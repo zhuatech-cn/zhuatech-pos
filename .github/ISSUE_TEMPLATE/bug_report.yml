@@ -1,0 +1,27 @@
+name: Bug 报告
+description: 提交可复现的社区源码问题
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: 请勿提交真实支付凭证、会员信息或生产日志。本项目仅限个人非商业学习交流。
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 业务场景与问题
+      description: 说明使用的页面、角色和期望行为。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      description: 请提供最小复现步骤与必要的脱敏日志。
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      placeholder: macOS / Windows / Linux，Node、JDK、浏览器版本

@@ -1,0 +1,25 @@
+{
+  "name": "@zhuatech/pos-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "知华科技 POS 社区源码版收银端与零售管理端，仅限个人非商业学习交流",
+  "author": "上海如静知华信息科技有限公司 <contact@zhuatech.cn>",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "dev": "vite",
+    "dev:demo": "VITE_DEMO_MODE=true vite",
+    "build": "vite build",
+    "build:demo": "VITE_DEMO_MODE=true vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "1.18.1",
+    "pinia": "4.0.2",
+    "vue": "3.5.40",
+    "vue-router": "5.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "6.0.8",
+    "vite": "8.1.5"
+  }
+}
