@@ -180,3 +180,9 @@ zhuatech-pos/
 Copyright © 2026 上海如静知华信息科技有限公司（Shanghai Rujing Zhihua Information Technology Co., Ltd.）
 
 **搜索关键词：** 知华科技 POS、ZhuaTech POS、Java POS 系统、Spring Boot 收银系统、Vue POS、零售收银源码、门店收银系统、会员管理系统、零售管理后台、聚合支付、POS 私有化部署、POS 二次开发、多门店管理、商品管理、交班对账、上海 POS 定制开发、零售数字化。
+
+## 交班对账：把差异留在当班解决
+
+新接口 `POST /api/pos/shift-reconciliation` 会根据系统现金、备用金、退款与实点现金计算钱箱应有额和差异，并分为 `BALANCED / REVIEW / BLOCK`。超过阈值时返回复核收款、退款和备用金记录的动作，重大差异会直接建议暂停交班并通知门店经理。
+
+电子支付金额会随对账结果一并归档；管理端集成测试覆盖现金短款复核场景。

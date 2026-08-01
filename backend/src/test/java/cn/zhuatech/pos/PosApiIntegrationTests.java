@@ -27,6 +27,15 @@ class PosApiIntegrationTests {
         mvc.perform(get("/api/pos/dashboard").header("Authorization", "Bearer " + token))
             .andExpect(status().isOk()).andExpect(jsonPath("$.data.summary.todayOrders").value(1147));
     }
+    @Test void managerCanReconcileShift() throws Exception {
+        String token = login("manager", "Demo@2026", "MANAGER");
+        mvc.perform(post("/api/pos/shift-reconciliation").header("Authorization", "Bearer " + token)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"registerNo\":\"POS-02\",\"systemCash\":5000,\"countedCash\":5600,\"electronicPayments\":20000,\"refundAmount\":200,\"openingFloat\":1000}"))
+            .andExpect(status().isOk()).andExpect(jsonPath("$.data.expectedDrawer").value(5800))
+            .andExpect(jsonPath("$.data.variance").value(-200))
+            .andExpect(jsonPath("$.data.status").value("REVIEW"));
+    }
     @Test void anonymousRequestIsRejected() throws Exception { mvc.perform(get("/api/pos/dashboard")).andExpect(status().isForbidden()); }
     private String login(String username, String password, String role) throws Exception {
         String body = mvc.perform(post("/api/auth/login").contentType(MediaType.APPLICATION_JSON)

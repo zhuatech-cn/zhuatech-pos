@@ -39,3 +39,7 @@ Copyright © 2026 上海如静知华信息科技有限公司。
 ```
 
 `paymentMethod` 可选 `WECHAT`、`ALIPAY`、`CASH`、`BANK_CARD`、`MIXED`。社区版接口返回模拟支付结果，不连接真实支付渠道。
+
+## 班次对账
+
+`POST /api/pos/shift-reconciliation`：核对钱箱应有额与实点额，返回差异、交班状态和经理复核要求。
