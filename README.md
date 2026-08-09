@@ -186,3 +186,7 @@ Copyright © 2026 上海如静知华信息科技有限公司（Shanghai Rujing Z
 新接口 `POST /api/pos/shift-reconciliation` 会根据系统现金、备用金、退款与实点现金计算钱箱应有额和差异，并分为 `BALANCED / REVIEW / BLOCK`。超过阈值时返回复核收款、退款和备用金记录的动作，重大差异会直接建议暂停交班并通知门店经理。
 
 电子支付金额会随对账结果一并归档；管理端集成测试覆盖现金短款复核场景。
+
+## 促销毛利门禁
+
+新增 `POST /api/pos/promotion-margin-guard`，在活动下发前计算折后收入、商品成本、积分成本、单件毛利和整场活动毛利，并输出 `APPROVE / REVIEW / BLOCK`。门店可以在收银优惠生效前识别负毛利和低毛利方案，降低价格配置错误带来的经营损失。
