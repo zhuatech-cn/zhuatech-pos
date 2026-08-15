@@ -43,3 +43,7 @@ Copyright © 2026 上海如静知华信息科技有限公司。
 ## 班次对账
 
 `POST /api/pos/shift-reconciliation`：核对钱箱应有额与实点额，返回差异、交班状态和经理复核要求。
+
+## 班次退款风险
+
+`POST /api/pos/insights/refund-risk`：根据销售与退款、作废和人工折扣数据返回班次风险分、处置决策与解释原因。

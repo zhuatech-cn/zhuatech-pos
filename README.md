@@ -190,3 +190,7 @@ Copyright © 2026 上海如静知华信息科技有限公司（Shanghai Rujing Z
 ## 促销毛利门禁
 
 新增 `POST /api/pos/promotion-margin-guard`，在活动下发前计算折后收入、商品成本、积分成本、单件毛利和整场活动毛利，并输出 `APPROVE / REVIEW / BLOCK`。门店可以在收银优惠生效前识别负毛利和低毛利方案，降低价格配置错误带来的经营损失。
+
+## 班次退款风险复核
+
+`POST /api/pos/insights/refund-risk` 从退款笔数、退款金额、交易作废和人工折扣四类信号识别异常班次，返回 `PASS / VERIFY_SAMPLE / REVIEW_SHIFT` 决策与解释原因，便于店长进行抽样核验和交班复盘。
