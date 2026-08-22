@@ -1,4 +1,4 @@
--- Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd.
+-- Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/
 CREATE TABLE pos_user (
     id BIGINT PRIMARY KEY AUTO_INCREMENT, username VARCHAR(32) NOT NULL UNIQUE, password VARCHAR(255) NOT NULL,
     full_name VARCHAR(50) NOT NULL, role VARCHAR(20) NOT NULL, store_name VARCHAR(80), enabled BOOLEAN NOT NULL DEFAULT TRUE,

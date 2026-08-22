@@ -1,4 +1,4 @@
-/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. */
+/* Copyright 2026 Shanghai Rujing Zhihua Information Technology Co., Ltd. · https://www.zhuatech.cn/ */
 export const products = [
   { sku:'FD-10021', barcode:'6901002100018', name:'海盐厚乳拿铁', category:'现制饮品', price:22, memberPrice:19.8, stock:48, status:'ACTIVE', colorCode:'sage', short:'厚乳' },
   { sku:'FD-10034', barcode:'6901003400018', name:'青提茉莉冰茶', category:'现制饮品', price:18, memberPrice:16.2, stock:36, status:'ACTIVE', colorCode:'mint', short:'茉莉' },
